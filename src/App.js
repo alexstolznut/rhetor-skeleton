@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route,  Link } from "react-router-dom"
 import {useState} from "react";
 import Login from "./components/Login";
 import Dashboard from "./components/Dashboard";
+import EditArticle from './components/EditArticle';
 
 function App() {
   const [state,setState] = useState({
@@ -24,7 +25,7 @@ function App() {
         <Routes>
         <Route exact path="/login" element={<Login setUser={setUser}/>}></Route>
           <Route exact path="/" element={<Dashboard userInfo={state.users} />}></Route>
-          <Route exact path="/editor"></Route>
+          <Route exact path="/editor" element={<EditArticle />}></Route>
         </Routes> 
       
     </Router>
